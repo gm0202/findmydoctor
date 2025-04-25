@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 interface FilterPanelProps {
   doctors: {
     specialities: { name: string }[];

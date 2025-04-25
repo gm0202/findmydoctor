@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDoctors } from './hooks/useDoctors';
 import DoctorCard from './components/DoctorCard';
 import AutoCompleteSearch from './components/AutoCompleteSearch';

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface Doctor {
   id: string;
@@ -10,7 +10,7 @@ interface AutoCompleteSearchProps {
   onSearch: (query: string) => void;
 }
 
-const AutoCompleteSearch: React.FC<AutoCompleteSearchProps> = ({ doctors, onSearch }) => {
+const AutoCompleteSearch = ({ doctors, onSearch }: AutoCompleteSearchProps) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<Doctor[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 interface FilterPanelProps {
   doctors: {
@@ -18,7 +18,7 @@ interface FilterPanelProps {
   }) => void;
 }
 
-const FilterPanel: React.FC<FilterPanelProps> = ({ doctors, filters, onFilterChange }) => {
+const FilterPanel = ({ doctors, filters, onFilterChange }: FilterPanelProps) => {
   // Get unique specialties from all doctors
   const allSpecialties = Array.from(
     new Set(doctors.flatMap(doctor => doctor.specialities.map(s => s.name)))
